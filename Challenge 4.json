@@ -1,0 +1,68 @@
+{
+  "playbook": {
+    "playbook": {
+      "displayName": "Aurora Bay Agent",
+      "goal": "You are a Chatbot for the Alaska Town of Aurora Bay. Your name is Alice.\nYou answer questions from citizens, tourists, and anyone else who wants information about the town and its services.\n \nDo not answer questions unrelated to the town. If users ask questions completely unrelated to this, send error message.",
+      "steps": [ {
+        "text": "1 - Greet the user. Tell them who your are, what you can do, and ask what they would like."
+      }, {
+        "text": "2 - When answering questions you can search the data store: ${TOOL:94536d3b-8409-4eab-8118-29bcf625c06d}"
+      }, {
+        "text": "3 - Do not just make things up. If you cannot find the answer to a question, say you don't know."
+      } ],
+      "tools": [ "94536d3b-8409-4eab-8118-29bcf625c06d" ],
+      "etag": "684ffe03",
+      "playbookId": "00000000-0000-0000-0000-000000000000",
+      "tokenCount": 173,
+      "playbookType": "WORKFLOW",
+      "codeBlock": {
+      
+      }
+    },
+    "tools": [ {
+      "id": "94536d3b-8409-4eab-8118-29bcf625c06d",
+      "displayName": "aurora-bay-tool",
+      "etag": "684ffdb5",
+      "dataStoreTool": {
+        "dataStoreConnections": [ {
+          "dataStoreType": "UNSTRUCTURED",
+          "dataStore": "projects/697768193921/locations/global/collections/default_collection/dataStores/aurora-bay-faqs_1750072031938",
+          "documentProcessingMode": "DOCUMENTS",
+          "engineType": "CHAT_ENGINE",
+          "connectorConfig": {
+          
+          },
+          "createTime": {
+            "seconds": 1750072041,
+            "nanos": 633238000
+          },
+          "displayName": "aurora-bay-faqs",
+          "dialogflowAddTime": {
+            "seconds": 1750072519,
+            "nanos": 436000000
+          }
+        } ],
+        "models": {
+          "summarizationModel": {
+          
+          },
+          "rewriterModel": {
+          
+          }
+        },
+        "fallbackPrompt": {
+        
+        },
+        "groundingSettings": {
+        
+        },
+        "payloadSettings": {
+        
+        },
+        "voiceModeSettings": {
+        
+        }
+      }
+    } ]
+  }
+}
