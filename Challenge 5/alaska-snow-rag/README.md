@@ -10,6 +10,8 @@ https://storage.googleapis.com/alaska-rag-chat-qwiklabs-gcp-02-e6e6123d96ed/inde
 
 The application has the following features implemented:
 
+
+
 1. Backend data store for RAG was loaded using the queries on the BigQuery console.
 2. The Backend API uses FastAPI built with python and was dockerized and deployed on the Google Cloud Functions.
 3. The unit tests were written using pytest with mock data
