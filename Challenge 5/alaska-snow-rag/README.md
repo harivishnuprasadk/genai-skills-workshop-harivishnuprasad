@@ -26,32 +26,33 @@ The application has the following features implemented:
 Folder Structure:
 ```
 alaska-snow-rag/
-├── backend/ # Backend API logic (FastAPI + RAG system)
-│ ├── main.py # FastAPI application entry point
-│ ├── config.py # Configuration and environment handling
-│ ├── rag_system.py # Core RAG retrieval + Gemini generation logic
-│ ├── prompt_validator.py # Input safety and validation filters
-│ ├── evaluation.py # Response evaluation (local + Google Eval)
-│ ├── test_local.py # Local test driver for RAG
-│ ├── test_unit.py # Unit tests for individual backend components
-│ ├── test_data.py # Sample inputs/expected outputs
-│ ├── requirements.txt # Backend dependencies
-│ ├── Dockerfile # Docker config for Cloud Run
-│ ├── .env.yaml # Env vars for deployment
-│ └── .dockerignore # Docker context exclusions
+├── backend/                         # Backend API logic (FastAPI + RAG system)
+│   ├── main.py                      # FastAPI application entry point
+│   ├── config.py                    # Configuration and environment handling
+│   ├── rag_system.py                # Core RAG retrieval + Gemini generation logic
+│   ├── prompt_validator.py          # Input safety and validation filters
+│   ├── evaluation.py                # Response evaluation (local + Google Eval)
+│   ├── test_local.py                # Local test driver for RAG
+│   ├── test_unit.py                 # Unit tests for individual backend components
+│   ├── test_data.py                 # Sample inputs/expected outputs
+│   ├── requirements.txt             # Backend dependencies
+│   ├── Dockerfile                   # Docker config for Cloud Run
+│   ├── .env.yaml                    # Env vars for deployment
+│   └── .dockerignore                # Docker context exclusions
 │
-├── frontend/ # Vite/React frontend UI
-│ ├── index.html # App entry HTML
-│ ├── vite.config.js # Vite build config
-│ ├── package.json # Frontend dependencies
-│ ├── dist/ # Production build (auto-generated)
-│ └── src/
-│ ├── main.jsx # App entry point
-│ ├── App.jsx # Root UI component
-│ ├── ChatInterface.jsx # Main chat window
-│ └── styles/ # CSS files
-│ ├── App.css
-│ └── index.css
+├── frontend/                        # Vite/React frontend UI
+│   ├── index.html                   # App entry HTML
+│   ├── vite.config.js               # Vite build config
+│   ├── package.json                 # Frontend dependencies
+│   ├── dist/                        # Production build (auto-generated)
+│   └── src/
+│       ├── main.jsx                 # App entry point
+│       ├── App.jsx                  # Root UI component
+│       ├── ChatInterface.jsx        # Main chat window
+│       └── styles/                  # CSS files
+│           ├── App.css
+│           └── index.css
+
 ```
 
 NOTE: We use the .env and .env.yaml for the credentials
