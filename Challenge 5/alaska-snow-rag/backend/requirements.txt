@@ -1,0 +1,19 @@
+# Core Web Framework
+fastapi
+uvicorn[standard]
+python-multipart
+
+# Google Cloud Services
+google-cloud-bigquery
+google-generativeai
+google-cloud-aiplatform
+
+# Environment Configuration
+python-dotenv
+
+# Data and Validation
+pandas
+
+# Testing
+pytest
+pytest-mock

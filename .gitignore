@@ -1,0 +1,35 @@
+# macOS system files
+.DS_Store
+
+# Node.js / Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.vite
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.env
+*.log
+
+# Test output
+*.cover
+*.pytest_cache/
+*.coverage
+
+# Docker
+.dockerignore
+.gcloudignore
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+
+# General
+.env.yaml
+*.csv
+*.zip

@@ -1,0 +1,23 @@
+-- CREATE OR REPLACE MODEL `alaska.Embeddings`
+-- REMOTE WITH CONNECTION `us.embedding_conn`
+-- OPTIONS (ENDPOINT = 'text-embedding-005');
+ 
+-- LOAD DATA OVERWRITE alaska.alaska_faq
+-- (
+--     question STRING,
+--     answer STRING
+-- )
+-- FROM FILES (
+--     format = 'CSV',
+--     uris = ['gs://labs.roitraining.com/alaska-dept-of-snow/alaska-dept-of-snow-faqs.csv']
+-- );
+ 
+-- CREATE OR REPLACE TABLE `alaska.alaska_faq_embedded` AS
+-- SELECT *
+-- FROM ML.GENERATE_EMBEDDING(
+--     MODEL `alaska.Embeddings`,
+--     (SELECT
+--         *,  -- This includes all existing fields
+--         CONCAT('Question: ', question, ' Answer: ', answer) AS content
+--      FROM `alaska.alaska_faq`)
+-- );
